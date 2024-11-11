@@ -5,7 +5,7 @@ import app from "./app";
 dotenv.config();
 
 const main = () => {
-  let server: Server = app.listen(process.env.PORT, () => {
+  let server: Server = app.listen(5000, () => {
     console.log("server is listening");
   });
 };
