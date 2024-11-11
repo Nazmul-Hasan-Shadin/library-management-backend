@@ -12,6 +12,9 @@ const errorMiddleware_1 = __importDefault(require("./middleware/errorMiddleware"
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
+app.get("/", (req, res) => {
+    res.send("server is running");
+});
 app.use("/api", books_route_1.BookRoutes);
 app.use("/api", member_route_1.MemberRoutes);
 app.use("/api", borrow_route_1.BorrowRoutes);

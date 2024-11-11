@@ -11,15 +11,14 @@ app.use(cors());
 
 app.use(express.json());
 
-
-
+app.get("/", (req, res) => {
+  res.send("server is running");
+});
 
 app.use("/api", BookRoutes);
 app.use("/api", MemberRoutes);
-app.use("/api",BorrowRoutes );
-
+app.use("/api", BorrowRoutes);
 
 app.use(globlaErrorHandler);
-
 
 export default app;
